@@ -46,12 +46,12 @@ angular.module('scannerApp')
       SettingsService.setValue('dataset', value);
     }
 
-    $scope.scannerModelChanged = function() {
+    $scope.validationModelChanged = function() {
       var value = {
-        id: $scope.settings.scannerModel.id,
-        name: $scope.settings.scannerModel.name
+        id: $scope.settings.validationModel.id,
+        name: $scope.settings.validationModel.name
       };
-      SettingsService.setValue('scannerModel', value);
+      SettingsService.setValue('validationModel', value);
     }
 
   });

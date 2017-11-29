@@ -49,7 +49,7 @@ tx1deploy: build distro
 	ls distro/$(name).zip
 	scp distro/$(name).zip ubuntu@$(local-tx1-host):~
 	# Unzip the new release
-	ssh skyraid@$(local-tx1-host) 'cp $(name).zip /media/ubuntu/3261-3531/packages'
+	ssh skyraid@$(local-tx1-host) 'sudo cp $(name).zip /media/ubuntu/3261-3531/packages/$(name).zip'
 	# TODO need to symlink this one
 
 devdeploy: build distro
