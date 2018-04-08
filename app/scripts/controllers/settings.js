@@ -44,7 +44,7 @@ angular.module('scannerApp')
         name: $scope.settings.dataset.name
       };
       SettingsService.setValue('dataset', value);
-    }
+    };
 
     $scope.validationModelChanged = function() {
       var value = {
@@ -52,6 +52,21 @@ angular.module('scannerApp')
         name: $scope.settings.validationModel.name
       };
       SettingsService.setValue('validationModel', value);
-    }
+    };
+
+    $scope.framesInARowChanged = function() {
+      var value = $scope.settings.framesInARow;
+      SettingsService.setValue('framesInARow', value);
+    };
+
+    $scope.requiredMeanOfConfidenceChanged = function() {
+      var value = $scope.settings.requiredMeanOfConfidence;
+      SettingsService.setValue('requiredMeanOfConfidence', value);
+    };
+
+    $scope.requiredConfidenceForMeanChanged = function() {
+      var value = $scope.settings.requiredConfidenceForMean;
+      SettingsService.setValue('requiredConfidenceForMean', value);
+    };
 
   });
